@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+  	<meta charset="utf-8"/>
+    <title>Unes Journaux</title>
+    <script src="{{url_for('static', filename='d3.js')}}" charset="utf-8"></script>
+    <script src="{{url_for('static', filename='d3.layout.cloud.js')}}"></script>
+    <script src="{{url_for('static', filename='d3.wordcloud.js')}}"></script>
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <h1>Unes de Journaux</h1>
+    <header>
+    <nav>
+    	<ul class="menu">
+        	<li class="menuitem"><a href="/">Accueil</a></li>
+        	<li class="menuitem"><a href="Formulaire.html">Journaux</a></li>
+		</ul>
+ 	</nav>
+ 	</header>
+ 	<h2> Wordcloud des sujets les plus fréquents de cette dernière semaine </h2>
+    <div id='wordcloud' style = 'text-align:center'></div>
+    <script>
+    function wordcloud(words){
+    d3.wordcloud()
+        .size([500, 500])
+        .fill(d3.scale.ordinal().range(["#008090", "#0090FF", "#00B0E0", "#005090"]))
+        .words(words)
+        .start();
+    }
+    </script>
+  </body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>
+			Unes Journaux
+		</title>
+		<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+	<header>
+			<h1>Unes de Journaux</h1>
+			<nav>
+    		<ul class="menu">
+        		<li class="menuitem"><a href="/">Accueil</a></li>
+        		<li class="menuitem"><a href="Formulaire.html">Journaux</a></li>
+			</ul>
+ 			</nav>
+	</header>
+	<h2>Choisissez votre journal:</h2>
+	<section>
+	<p id='test'></p>
+	<form action="/quel_journal" method="post">
+	<select name="journal">
+	<option value="LePoint">Le Point</option>
+	<option value="JournalduNet">Le Journal du Net</option>
+	<option value="courrier">Courrier International</option>
+	<option value="leParisien">Le Parisien</option>
+	<option value="20minutes">20 minutes</option>
+	<option value="laTribune">La Tribune</option>
+	<option value="leDauphine">Le Dauphine</option>
+	<option value="sudouest">Sud Ouest</option>
+	</select>
+ 	<input type="submit" value="Envoyer"></input>
+	</form>
+	</section>
+	<img id="element" src="/static/journal.jpg" alt="journal" width="550" height="350">
+	</body>
+
+</html>

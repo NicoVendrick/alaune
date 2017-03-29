@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	<meta charset="utf-8"/>
+	<title>
+		Unes Journaux
+	</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
+		</head>
+	<body>
+	<h1> Rapport sur ce mot clé : </h1>
+	<a href="../"> Retour </a><br /><br />
+	<p> Évolution de l'occurrence du mot clé au furs et à mesure des jours d'il y a 7 jours à aujourd'hui : </p>
+	<p id='graph'></p>
+	<p style = 'text-align:left'> Article en rapport avec le mot clé depuis 7 jours : </p>
+	
+	<style type="text/css">
+		
+			div.bar {
+				display: inline-block;
+				width: 20px;
+				height: 75px;	/* Gets overriden by D3-assigned height below */
+				margin-right: 2px;
+				background-color: teal;
+			}
+		
+	</style>
+	<script>
+	function graph (dataset){
+	d3.select("#graph").selectAll("div")
+    	.data(dataset)
+    	.enter()
+    	.append("div")
+    	.attr("class", "bar")
+    	.style("height", function(d) {
+        	var barHeight = d * 5;
+        	return barHeight + "px";
+    	});
+    	}
+	</script>
+	</body>
+</html>
