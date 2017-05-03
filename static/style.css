@@ -1,8 +1,10 @@
 h1
 { 
-color : #F5F5F5;
+color:skyblue; 
+line-height: 3; margin-top: 0px; 
+margin-bottom: 40px;
 text-align : center;
-background-color : #5F9EA0;
+background-image : url(/static/bandeau.jpg);
 display: block;
 }
 h2
@@ -10,6 +12,73 @@ h2
 text-align : center;
 color : black;
 background-color : #F5F5F5;
+}
+
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 0 13px 3px black;
+}
+
+.text {
+  color: #F5F5F5;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.numbertext {
+  color: #F5F5F5;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 p
@@ -25,15 +94,6 @@ text-align : left;
 color : #5F9EA0;
 background-color : #F5F5F5;
 display: block;
-}
-
-img 
-{
-display : block;
-padding: 5px;
-border: 50px solid #F5F5F5;
-background-color: #F5F5F5;
-margin: auto;
 }
 
 

@@ -7,6 +7,7 @@
     <script src="{{url_for('static', filename='d3.js')}}" charset="utf-8"></script>
     <script src="{{url_for('static', filename='d3.layout.cloud.js')}}"></script>
     <script src="{{url_for('static', filename='d3.wordcloud.js')}}"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
   </head>
   <body>
@@ -19,7 +20,7 @@
 		</ul>
  	</nav>
  	</header>
- 	<h2> Wordcloud des sujets les plus fréquents de cette dernière semaine </h2>
+ 	<h3 style="text-align:center"> Wordcloud des sujets les plus fréquents de cette dernière semaine </h3>
     <div id='wordcloud' style = 'text-align:center'></div>
     <script>
     function wordcloud(words){
@@ -30,4 +31,7 @@
         .start();
     }
     </script>
+    <footer>
+	Site réalisé par Nicolas Vendrick
+	</footer>
   </body>
