@@ -88,7 +88,7 @@ def select_texte () :
 	word_string = word_string.replace('"'," ")
 	word_string = word_string.replace('\n'," ")
 	word_string = word_string.replace('#'," ")
-	replace = [":", ",", ".", "?", "!", " à ", " Les ", " après ", " les ", " a ", " entre ", " été ", "(", ")", "«", "»", " encore ", " ans ", " avant ", " va ", " un ", " Deux ", " deux " ," trois ", " quatre ", " cinq ", " six ", " sept ", " huit ", " neuf ", " dix ", " d’un ", " plus ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", " fait ", " A ", " vue ", " devant ", " derrière ", " -", " bon ", " contre ", " toujours ", " Pourquoi ", " TF ", " veut ", " depuis ", " sans ", " moins ", " garde ", " d'", " l'", " c'", " n'", "l’", " s'", "%", " e ", " chez ", "Après", "Avant", " face ", " doit ", " lors ", " sous ", " avoir ", " être ", " heure ", " Pen ","morts", " faire ", " tout ", "bien ", " Quand ", " peut ", "–", " comment ", " a-t-il "," mis ", " vont ", " met ", " où ", " nouveau ", " nouvelle ", " qu'", " faut ", " vers ", " VIDEO ", " grand ", " retour ", " si ", " L'", "Comment ", " selon ", " passe ", " ils ", " tous ", "'", " près ", " pourquoi ", " er ", " demande ", " dernier ", " personnes ", " coup ", " très ", " euros " ]
+	replace = [":", ",", ".", "?", "!", " à ", " Les ", " après ", " les ", " a ", " entre ", " été ", "(", ")", "«", "»", " encore ", " ans ", " avant ", " va ", " un ", " Deux ", " deux " ," trois ", " quatre ", " cinq ", " six ", " sept ", " huit ", " neuf ", " dix ", " d’un ", " plus ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", " fait ", " A ", " vue ", " devant ", " derrière ", " -", " bon ", " contre ", " toujours ", " Pourquoi ", " TF ", " veut ", " depuis ", " sans ", " moins ", " garde ", " d'", " l'", " c'", " n'", "l’", " s'", "%", " e ", " chez ", "Après", "Avant", " face ", " doit ", " lors ", " sous ", " avoir ", " être ", " heure ", " Pen ","morts", " faire ", " tout ", "bien ", " Quand ", " peut ", "–", " comment ", " a-t-il "," mis ", " vont ", " met ", " où ", " nouveau ", " nouvelle ", " qu'", " faut ", " vers ", " VIDEO ", " grand ", " retour ", " si ", " L'", "Comment ", " selon ", " passe ", " ils ", " tous ", "'", " près ", " pourquoi ", " er ", " demande ", " dernier ", " personnes ", " coup ", " très ", " euros ", " Macron-Le " ]
 	for word in replace :
 		word_string=word_string.replace(word," ")
 	word_string = unicode(word_string, ('utf8'))
@@ -112,7 +112,7 @@ def select_ocurrence_date (word) :
 		cursor.execute ("SELECT count(titre) FROM unes WHERE titre LIKE '%"+word+"%' AND date = DATE_ADD(CURDATE(), INTERVAL -"+str(i)+" DAY)")
 		for j in cursor:
 			if j[0]==0 :
-				tab.append (0.5)
+				tab.append (0)
 			else : tab.append(j[0])
 	tab.reverse()
 	return tab

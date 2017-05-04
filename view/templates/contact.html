@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+	A la Une
+</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+</style>
+</head>
+<body>
+<header>
+			<h1>A la Une</h1>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">A la Une</a>
+    </div>
+    	<ul class="nav navbar-nav">
+      	<li><a href="/">Accueil</a></li>
+      	<li><a href="Formulaire.html">Journaux</a></li>
+      	<li class="active"><a href="">Contact</a></li>
+    	</ul>
+  	</div>
+	</nav>
+  
+	<div class="container">
+	</div>
+	</header>
+<div class="card" style="max-width: 250px">
+  <img src="/static/moi.jpg" alt="Nicolas" style="width:100%">
+  <div class="container" style="width:250px">
+    <h2>Nicolas Vendrick</h2>
+    <p class="title"> CMI Statistique et Informatique</p>
+    <p>Universite de Bordeaux</p>
+    <div style="margin: 24px 0;">
+      <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a> 
+   </div>
+  </div>
+</div>
+
+</body>
+</html>

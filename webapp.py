@@ -19,6 +19,10 @@ def accueil():
 def wordcloud(name) :
 	return wordcloud_view.wordcloud_key(name)
 
+@app.route('/contact.html')
+def contact() :
+	return wordcloud_view.contact()
+
 	
 @app.route('/quel_journal', methods = ['POST'])
 def quel_journal():

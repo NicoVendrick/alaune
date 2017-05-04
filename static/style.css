@@ -2,7 +2,7 @@ h1
 { 
 color:skyblue; 
 line-height: 3; margin-top: 0px; 
-margin-bottom: 40px;
+margin-bottom: 0px;
 text-align : center;
 background-image : url(/static/bandeau.jpg);
 display: block;
@@ -81,13 +81,6 @@ body {font-family: Verdana,sans-serif;}
   .text {font-size: 11px}
 }
 
-p
-{
-text-align : center;
-display: block;
-font-size : 20px;
-}
-
 #titre
 {
 text-align : left;
@@ -102,11 +95,6 @@ display: block;
 background-color : #FF0000;
 }
 
-li:nth-child(2n)
-{
-background-color : white;
-color : #000000;
-}
 
 .classement
 {
@@ -127,32 +115,6 @@ border: 1px solid #AAAAAA;
 background-color: #f5f5dc;
 }
 
-ul.menu
-{
-list-style-type: none;
-margin: 10px;
-padding: 0px;
-}
-ul.menu li.menuitem
-{
-display:inline-block;
-background-color: #5F9EA0;
-padding-top: 10px;
-padding-bottom: 10px;
-}
-
-ul.menu li.menuitem a
-{
-color: #F5F5F5;
-padding: 10px;
-text-decoration: none;
-}
-ul.menu li.menuitem a:hover
-{
-padding: 10px;
-background-color: #008B8B;
-color: white;
-}
 
 body {
 background-color: #F5F5F5;
@@ -167,21 +129,4 @@ width: 100%;
 section
 {
 text-align : center;
-}
-
-
-@media screen and (max-width: 640px) {
-    section
-    {
-	clear:both;
-	width:100%;
-    }
-    ul.menu li.menuitem 
-	{
-	display: block;
-	background-color: lightblue;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	}
-    
 }

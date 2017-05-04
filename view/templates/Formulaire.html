@@ -5,7 +5,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>
-			Unes Journaux
+			A la Une
 		</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
@@ -14,13 +14,22 @@
 	</head>
 	<body>
 	<header>
-			<h1>Unes de Journaux</h1>
-			<nav>
-    		<ul class="menu">
-        		<li class="menuitem"><a href="/">Accueil</a></li>
-        		<li class="menuitem"><a href="Formulaire.html">Journaux</a></li>
-			</ul>
- 			</nav>
+			<h1>A la Une</h1>
+			<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">A la Une</a>
+    </div>
+    	<ul class="nav navbar-nav">
+      	<li><a href="/">Accueil</a></li>
+      	<li class="active"><a href="">Journaux</a></li>
+      	<li><a href="contact.html">Contact</a></li>
+    	</ul>
+  	</div>
+	</nav>
+  
+	<div class="container">
+	</div>
 	</header>
 	<div class="container" style="width: 800px">
   	<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -37,8 +46,8 @@
       <div class="item active">
         <img src="/static/slide_1.jpg" alt="Los Angeles" style="width:100%;">
         <div class="carousel-caption">
-          <h3>Macron vs Le Pen</h3>
-          <p>Le Duel à la Présidentielle</p>
+          <h3>Emmanuel Macron</h3>
+          <p>Président de la République</p>
         </div>
       </div>
 
@@ -53,8 +62,8 @@
       <div class="item">
         <img src="/static/slide_3.jpg" alt="New York" style="width:100%;">
         <div class="carousel-caption">
-          <h3>Débat Entre-deux-tours</h3>
-          <p>3 Mai 2017</p>
+          <h3>Monaco</h3>
+          <p>Ne perd pas espoir</p>
         </div>
       </div>
   
@@ -88,9 +97,6 @@
  	<input type="submit" value="Envoyer"></input><br/><br/>
 	</form>
 	</section>
-	<footer>
-	Site réalisé par Nicolas Vendrick
-	</footer>
 	</body>
 
 </html>

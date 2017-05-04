@@ -3,7 +3,7 @@
 
   <head>
   	<meta charset="utf-8"/>
-    <title>Unes Journaux</title>
+    <title>A la Une</title>
     <script src="{{url_for('static', filename='d3.js')}}" charset="utf-8"></script>
     <script src="{{url_for('static', filename='d3.layout.cloud.js')}}"></script>
     <script src="{{url_for('static', filename='d3.wordcloud.js')}}"></script>
@@ -11,14 +11,23 @@
     <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" media="all" />
   </head>
   <body>
-    <h1>Unes de Journaux</h1>
+    <h1>A la Une</h1>
     <header>
-    <nav>
-    	<ul class="menu">
-        	<li class="menuitem"><a href="/">Accueil</a></li>
-        	<li class="menuitem"><a href="Formulaire.html">Journaux</a></li>
-		</ul>
- 	</nav>
+   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">A la Une</a>
+    </div>
+    	<ul class="nav navbar-nav">
+      	<li class="active"><a href="">Accueil</a></li>
+      	<li><a href="Formulaire.html">Journaux</a></li>
+      	<li><a href="contact.html">Contact</a></li>
+    	</ul>
+  	</div>
+	</nav>
+  
+	<div class="container">
+	</div>
  	</header>
  	<h3 style="text-align:center"> Wordcloud des sujets les plus fréquents de cette dernière semaine </h3>
     <div id='wordcloud' style = 'text-align:center'></div>
@@ -31,7 +40,4 @@
         .start();
     }
     </script>
-    <footer>
-	Site réalisé par Nicolas Vendrick
-	</footer>
   </body>
