@@ -13,31 +13,28 @@
   <body>
     <h1>A la Une</h1>
     <header>
-   <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">A la Une</a>
-    </div>
-    	<ul class="nav navbar-nav">
-      	<li class="active"><a href="">Accueil</a></li>
-      	<li><a href="Formulaire.html">Journaux</a></li>
-      	<li><a href="contact.html">Contact</a></li>
-    	</ul>
-  	</div>
-	</nav>
-  
-	<div class="container">
-	</div>
+   		<nav class="navbar navbar-inverse">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="/">A la Une</a>
+   				</div>
+    			<ul class="nav navbar-nav">
+      				<li class="active"><a href="">Accueil</a></li>
+      				<li><a href="Formulaire.html">Journaux</a></li>
+      				<li><a href="contact.html">Contact</a></li>
+    			</ul>
+  			</div>
+		</nav>
+  		<div class="container"></div>
  	</header>
  	<h3 style="text-align:center"> Wordcloud des sujets les plus fréquents de cette dernière semaine </h3>
     <div id='wordcloud' style = 'text-align:center'></div>
     <script>
-    function wordcloud(words){
-    d3.wordcloud()
-        .size([500, 500])
-        .fill(d3.scale.ordinal().range(["#008090", "#0090FF", "#00B0E0", "#005090"]))
-        .words(words)
-        .start();
-    }
-    </script>
-  </body>
+    	function wordcloud(words){
+    		d3.wordcloud()
+        		.size([500, 500])
+        		.fill(d3.scale.ordinal().range(["#008090", "#0090FF", "#00B0E0", "#005090"]))
+        		.words(words)
+        		.start();
+    	}
+    	// le reste est ajouter par une fonction modele_donnees.select_texte()

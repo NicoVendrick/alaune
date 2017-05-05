@@ -45,15 +45,16 @@ def select_une(journal):
 	cursor.execute ("SELECT titre, URL, date FROM unes WHERE quotidien_id LIKE '%s' AND date LIKE CURDATE()" %int(id_quotidien[0]))
 	rows = cursor.fetchall()
 	html = ''
-	html += '<h1>'
-	html += 'Votre Journal : ' + journal + '</h1>'
-	html += '<h2 id=titre> Unes principales de votre Journal : </h2>'
-	html += '<a href="Formulaire.html"> Retour </a>'
-	html += '<ul>'
+	html += '<h1>Votre Journal : ' + journal + '</h1> \n'
+	html += '<h2 id=titre> Unes principales de votre Journal : </h2> \n'
+	html += '<a href="Formulaire.html"> Retour </a> \n'
+	html += '<ul> \n'
 	for (titre, URL, date) in rows:
 		html += '<li>'
-		html += '<a href="' + URL + '">' + titre.strip() + '</a></li>'
-	html += '</ul>'
+		html += '<a href="' + URL + '">' + titre.strip() + '</a></li>\n'
+	html += '</ul>\n'
+	html += '</body>\n'
+	html += '</html>'
 	return html
 		
 def select_date(journal):
@@ -88,13 +89,12 @@ def select_texte () :
 	word_string = word_string.replace('"'," ")
 	word_string = word_string.replace('\n'," ")
 	word_string = word_string.replace('#'," ")
-	replace = [":", ",", ".", "?", "!", " à ", " Les ", " après ", " les ", " a ", " entre ", " été ", "(", ")", "«", "»", " encore ", " ans ", " avant ", " va ", " un ", " Deux ", " deux " ," trois ", " quatre ", " cinq ", " six ", " sept ", " huit ", " neuf ", " dix ", " d’un ", " plus ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", " fait ", " A ", " vue ", " devant ", " derrière ", " -", " bon ", " contre ", " toujours ", " Pourquoi ", " TF ", " veut ", " depuis ", " sans ", " moins ", " garde ", " d'", " l'", " c'", " n'", "l’", " s'", "%", " e ", " chez ", "Après", "Avant", " face ", " doit ", " lors ", " sous ", " avoir ", " être ", " heure ", " Pen ","morts", " faire ", " tout ", "bien ", " Quand ", " peut ", "–", " comment ", " a-t-il "," mis ", " vont ", " met ", " où ", " nouveau ", " nouvelle ", " qu'", " faut ", " vers ", " VIDEO ", " grand ", " retour ", " si ", " L'", "Comment ", " selon ", " passe ", " ils ", " tous ", "'", " près ", " pourquoi ", " er ", " demande ", " dernier ", " personnes ", " coup ", " très ", " euros ", " Macron-Le " ]
+	replace = [":", ",", ".", "?", "!", " à ", " Les ", " après ", " les ", " a ", " entre ", " été ", "(", ")", "«", "»", " encore ", " ans ", " avant ", " va ", " un ", " Deux ", " deux " ," trois ", " quatre ", " cinq ", " six ", " sept ", " huit ", " neuf ", " dix ", " d’un ", " plus ", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", " fait ", " A ", " vue ", " devant ", " derrière ", " -", " bon ", " contre ", " toujours ", " Pourquoi ", " TF ", " veut ", " depuis ", " sans ", " moins ", " garde ", " d'", " l'", " c'", " n'", "l’", " s'", "%", " e ", " chez ", "Après", "Avant", " face ", " doit ", " lors ", " sous ", " avoir ", " être ", " heure ", " Pen ","morts", " faire ", " tout ", "bien ", " Quand ", " peut ", "–", " comment ", " a-t-il "," mis ", " vont ", " met ", " où ", " nouveau ", " nouvelle ", " qu'", " faut ", " vers ", " VIDEO ", " grand ", " retour ", " si ", " L'", "Comment ", " selon ", " passe ", " ils ", " tous ", "'", " près ", " pourquoi ", " er ", " demande ", " dernier ", " personnes ", " coup ", " très ", " euros ", " Macron-Le ", " ça " ]
 	for word in replace :
 		word_string=word_string.replace(word," ")
 	word_string = unicode(word_string, ('utf8'))
 	word_string = stopWords(word_string)
 	html = '' + '\n'
-	html += "<script>" + '\n'
 	html += 'var words = ['
 	for i in range(len(word_string)-1):
 		html += "{text : '" + word_string[i]['text'] + "', size: " + str(word_string[i]['size']) + ", href: '" + word_string[i]['href'] + "'},"
@@ -103,6 +103,7 @@ def select_texte () :
 	html += ']; \n'
 	html += "wordcloud(words);" + '\n'
 	html += "</script>"	+ '\n'
+	html += "</body>"	+ '\n'
 	html += "</html>" 
 	return html
 	

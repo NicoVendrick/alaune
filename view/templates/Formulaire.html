@@ -13,90 +13,82 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-	<header>
+		<header>
 			<h1>A la Une</h1>
 			<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">A la Une</a>
-    </div>
-    	<ul class="nav navbar-nav">
-      	<li><a href="/">Accueil</a></li>
-      	<li class="active"><a href="">Journaux</a></li>
-      	<li><a href="contact.html">Contact</a></li>
-    	</ul>
-  	</div>
-	</nav>
+  				<div class="container-fluid">
+    				<div class="navbar-header">
+      					<a class="navbar-brand" href="/">A la Une</a>
+    				</div>
+    				<ul class="nav navbar-nav">
+      					<li><a href="/">Accueil</a></li>
+      					<li class="active"><a href="">Journaux</a></li>
+      					<li><a href="contact.html">Contact</a></li>
+    				</ul>
+  				</div>
+			</nav>
+			<div class="container"></div>
+		</header>
+		<div class="container" style="width: 800px">
+  			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    		<!-- Carrousel -->
+    			<ol class="carousel-indicators">
+      				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      				<li data-target="#myCarousel" data-slide-to="1"></li>
+      				<li data-target="#myCarousel" data-slide-to="2"></li>
+    			</ol>
+    			<div class="carousel-inner">
+					<div class="item active">
+        				<img src="/static/slide_1.jpg" alt="Los Angeles" style="width:100%;">
+        				<div class="carousel-caption">
+          					<h3>Emmanuel Macron</h3>
+          					<p>Président de la République</p>
+        				</div>
+     				</div>
+     				<div class="item">
+        				<img src="/static/slide_2.jpg" alt="Chicago" style="width:100%;">
+        				<div class="carousel-caption">
+          					<h3>Défilé 1er Mai</h3>
+          					<p>Violence contre la police</p>
+        				</div>
+      				</div>
+    				<div class="item">
+        				<img src="/static/slide_3.jpg" alt="New York" style="width:100%;">
+        				<div class="carousel-caption">
+          					<h3>Monaco</h3>
+          					<p>Ne perd pas espoir</p>
+        				</div>
+      				</div>
   
-	<div class="container">
-	</div>
-	</header>
-	<div class="container" style="width: 800px">
-  	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+    			</div>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-      <div class="item active">
-        <img src="/static/slide_1.jpg" alt="Los Angeles" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Emmanuel Macron</h3>
-          <p>Président de la République</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="/static/slide_2.jpg" alt="Chicago" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Défilé 1er Mai</h3>
-          <p>Violence contre la police</p>
-        </div>
-      </div>
-    
-      <div class="item">
-        <img src="/static/slide_3.jpg" alt="New York" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Monaco</h3>
-          <p>Ne perd pas espoir</p>
-        </div>
-      </div>
-  
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-	<h2>Choisissez votre journal:</h2>
-	<section>
-	<p id='test'></p>
-	<form action="/quel_journal" method="post">
-	<select name="journal">
-	<option value="LePoint">Le Point</option>
-	<option value="JournalduNet">Le Journal du Net</option>
-	<option value="courrier">Courrier International</option>
-	<option value="leParisien">Le Parisien</option>
-	<option value="20minutes">20 minutes</option>
-	<option value="laTribune">La Tribune</option>
-	<option value="leDauphine">Le Dauphine</option>
-	<option value="sudouest">Sud Ouest</option>
-	</select>
- 	<input type="submit" value="Envoyer"></input><br/><br/>
-	</form>
-	</section>
+    		<!-- Controle de gauche et droite -->
+    			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      				<span class="glyphicon glyphicon-chevron-left"></span>
+      				<span class="sr-only">Previous</span>
+    			</a>
+    			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+      				<span class="glyphicon glyphicon-chevron-right"></span>
+      				<span class="sr-only">Next</span>
+    			</a>
+  			</div>
+		</div>
+		<h2>Choisissez votre journal:</h2>
+		<section>
+			<p id='test'></p>
+			<form action="/quel_journal" method="post">
+				<select name="journal">
+					<option value="LePoint">Le Point</option>
+					<option value="JournalduNet">Le Journal du Net</option>
+					<option value="courrier">Courrier International</option>
+					<option value="leParisien">Le Parisien</option>
+					<option value="20minutes">20 minutes</option>
+					<option value="laTribune">La Tribune</option>
+					<option value="leDauphine">Le Dauphine</option>
+					<option value="sudouest">Sud Ouest</option>
+				</select>
+ 				<input type="submit" value="Envoyer"></input><br/><br/>
+			</form>
+		</section>
 	</body>
-
 </html>
